@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWave</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { neonGreen: '#00FF94', dark: '#11001C' }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <nav class="container-custom py-6 flex justify-between items-center relative z-50">
+        <div class="text-2xl font-extrabold text-white">
+            Tech<span class="text-gradient">Wave.</span>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="peer hidden">
+        <label for="menu-toggle" class="lg:hidden cursor-pointer">
+            <img src="images/hamburger-menu.png" class="w-8 h-8">
+        </label>
+
+        <div class="nav-menu hidden lg:flex gap-10 text-sm font-medium text-gray-400">
+            <a href="#" class="hover:text-white transition">Home</a>
+            <a href="#about" class="hover:text-white transition">About</a>
+            <a href="#episodes" class="hover:text-white transition">Episodes</a>
+            <a href="#host" class="hover:text-white transition">Host</a>
+        </div>
+
+        <div class="hidden lg:block">
+            <button class="bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:scale-105 transition">
+                Subscribe →
+            </button>
+        </div>
+    </nav>
